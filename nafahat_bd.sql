@@ -119,7 +119,7 @@ INSERT INTO `formateur` (`id`, `nom_prenom_fr`, `nom_prenom_ar`, `email`, `telep
 (2, 'Sarah Martin', 'سارة مارتان', 'sarah.martin@nafahat.com', '0623456789', 'Formatrice certifiée en IA et Machine Learning, docteure en informatique.', 'مدربة معتمدة في الذكاء الاصطناعي وتعلم الآلة، دكتورة في علوم الحاسوب.', 1, 'sarah_martin.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (3, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (4, 'Sophie Bernard', 'صوفي برنار', 'sophie.bernard@nafahat.com', '0645678901', 'Designer UI/UX primée, ancienne designer chez Apple.', 'مصممة UI/UX حاصلة على جوائز، مصممة سابقة في آبل.', 3, 'sophie_bernard.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
-(5, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل بين الثقافات.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
+(5, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل entre les cultures.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (6, 'Jean Dupont', 'جان دوبون', 'jean.dupont@nafahat.com', '0612345678', 'Expert en développement mobile avec plus de 10 ans d\'expérience chez Google.', 'خبير في تطوير التطبيقات المحمول مع أكثر من 10 سنوات من الخبرة في جوجل.', 1, 'jean_dupont.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (7, 'Sarah Martin', 'سارة مارتان', 'sarah.martin@nafahat.com', '0623456789', 'Formatrice certifiée en IA et Machine Learning, docteure en informatique.', 'مدربة معتمدة في الذكاء الاصطناعي وتعلم الآلة، دكتورة في علوم الحاسوب.', 1, 'sarah_martin.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (8, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
@@ -256,7 +256,7 @@ CREATE TABLE `videos` (
   `title_ar` text NOT NULL,
   `description_fr` text DEFAULT NULL,
   `description_ar` text DEFAULT NULL,
-  `video_id` text NOT NULL,
+  `video_id` varchar(100) NOT NULL,
   `thumbnail_url` text DEFAULT NULL,
   `views` int(11) DEFAULT 0,
   `is_active` int(11) DEFAULT 1,
@@ -366,7 +366,7 @@ ALTER TABLE `type_formation`
 --
 ALTER TABLE `videos`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `video_id` (`video_id`) USING HASH,
+  ADD UNIQUE KEY `video_id` (`video_id`),
   ADD KEY `idx_videos_active` (`is_active`),
   ADD KEY `idx_videos_created` (`created_at`);
 
