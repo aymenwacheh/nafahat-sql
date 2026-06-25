@@ -115,7 +115,7 @@ CREATE TABLE `formateur` (
 --
 
 INSERT INTO `formateur` (`id`, `nom_prenom_fr`, `nom_prenom_ar`, `email`, `telephone`, `bio_fr`, `bio_ar`, `id_categorie`, `photo`, `nbrSess`, `pay`, `ch3`, `ch4`, `ch5`, `created_at`, `updated_at`) VALUES
-(1, 'Jean Dupont', 'جان دوبون', 'jean.dupont@nafahat.com', '0612345678', 'Expert en développement mobile avec plus de 10 ans d\'expérience chez Google.', 'خبير في تطوير التطبيقات المحمول مع أكثر من 10 سنوات من الخبرة في جوجل.', 1, 'jean_dupont.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
+(1, 'Jean Dupont', 'جان دوبون', 'jean.dupont@nafahat.com', '0612345678', 'Expert en développement mobile avec plus de 10 ans d\'expérience chez Google.', 'خبير في تطوير التطبيقات المحمول avec plus de 10 ans d\'expérience chez Google.', 1, 'jean_dupont.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (2, 'Sarah Martin', 'سارة مارتان', 'sarah.martin@nafahat.com', '0623456789', 'Formatrice certifiée en IA et Machine Learning, docteure en informatique.', 'مدربة معتمدة في الذكاء الاصطناعي وتعلم الآلة، دكتورة في علوم الحاسوب.', 1, 'sarah_martin.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (3, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (4, 'Sophie Bernard', 'صوفي برنار', 'sophie.bernard@nafahat.com', '0645678901', 'Designer UI/UX primée, ancienne designer chez Apple.', 'مصممة UI/UX حاصلة على جوائز، مصممة سابقة في آبل.', 3, 'sophie_bernard.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
@@ -124,7 +124,7 @@ INSERT INTO `formateur` (`id`, `nom_prenom_fr`, `nom_prenom_ar`, `email`, `telep
 (7, 'Sarah Martin', 'سارة مارتان', 'sarah.martin@nafahat.com', '0623456789', 'Formatrice certifiée en IA et Machine Learning, docteure en informatique.', 'مدربة معتمدة في الذكاء الاصطناعي وتعلم الآلة، دكتورة في علوم الحاسوب.', 1, 'sarah_martin.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (8, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (9, 'Sophie Bernard', 'صوفي برنار', 'sophie.bernard@nafahat.com', '0645678901', 'Designer UI/UX primée, ancienne designer chez Apple.', 'مصممة UI/UX حاصلة على جوائز، مصممة سابقة في آبل.', 3, 'sophie_bernard.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
-(10, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل بين الثقافات.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
+(10, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل entre les cultures.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (11, 'chikh bilel neb mahmoud', 'chikh bilel neb mahmoud', 'bilel@gmail.com', '98987654', '', '', 9, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:39:36', '2026-06-16 11:39:36'),
 (12, 'fghj', 'fgj', 'fghjfghj', '216546', 'fghjfghj', 'fghjfghj', 2, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:21:52', '2026-06-22 14:21:52');
 
@@ -208,7 +208,7 @@ CREATE TABLE `sous_categorie` (
 INSERT INTO `sous_categorie` (`id`, `nom_fr`, `nom_ar`, `id_categorie`, `ch1`, `ch2`, `ch3`, `ch4`, `ch5`, `created_at`, `updated_at`) VALUES
 (1, 'zzzzz', 'ffffff', 9, NULL, NULL, NULL, NULL, NULL, '2026-06-19 17:06:50', '2026-06-19 17:06:50'),
 (2, 'fghj', 'fghjghj', 3, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:48:56', '2026-06-22 13:48:56'),
-(3, 'sdfv', 'sdfvsdfvsdfvsdfvsdvf', 4, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:11:35', '2026-06-22 14:11:35'),
+(3, 'sdfv', 'sdfvsdfvsdfvsdfvsdfvf', 4, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:11:35', '2026-06-22 14:11:35'),
 (4, 'sdfv', 'sdv', 5, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:11:46', '2026-06-22 14:11:46'),
 (5, 'sdfv', 'sdfv', 7, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:12:14', '2026-06-22 14:12:14'),
 (6, 'ooo', 'oooo', 8, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:19:09', '2026-06-22 14:19:09'),
@@ -300,15 +300,6 @@ CREATE TABLE `v_formations_promo` (
 -- --------------------------------------------------------
 
 --
--- Doublure de structure pour la vue `v_formation_complete`
--- (Voir ci-dessous la vue réelle)
---
-CREATE TABLE `v_formation_complete` (
-);
-
--- --------------------------------------------------------
-
---
 -- Structure de la vue `v_formations_promo`
 --
 DROP TABLE IF EXISTS `v_formations_promo`;
@@ -322,7 +313,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `v_formation_complete`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT `f`.`id` AS `id`, `f`.`titre_fr` AS `titre_fr`, `f`.`titre_ar` AS `titre_ar`, `f`.`type` AS `type`, `f`.`cible_fr` AS `cible_fr`, `f`.`cible_ar` AS `cible_ar`, `f`.`duree` AS `duree`, `f`.`periode` AS `periode`, `f`.`prix` AS `prix`, `f`.`discount` AS `discount`, `f`.`valeur_disc` AS `valeur_disc`, `f`.`descri_fr` AS `descri_fr`, `f`.`descri_ar` AS `descri_ar`, `f`.`id_categorie` AS `id_categorie`, `f`.`id_formateur` AS `id_formateur`, `f`.`actif` AS `actif`, `f`.`photo` AS `photo`, `f`.`ch1` AS `ch1`, `f`.`ch2` AS `ch2`, `f`.`ch3` AS `ch3`, `f`.`ch4` AS `ch4`, `f`.`ch5` AS `ch5`, `f`.`created_at` AS `created_at`, `f`.`updated_at` AS `updated_at`, `c`.`categorie_fr` AS `categorie_fr`, `c`.`categorie_ar` AS `categorie_ar`, `form`.`nom_prenom_fr` AS `formateur_nom_fr`, `form`.`nom_prenom_ar` AS `formateur_nom_ar`, `form`.`email` AS `formateur_email`, `form`.`telephone` AS `formateur_telephone`, `form`.`photo` AS `formateur_photo`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN `f`.`prix`- `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN concat('-',`f`.`valeur_disc`,' DH') ELSE NULL END AS `discount_text` FROM ((`formation` `f` left join `categorie` `c` on(`f`.`id_categorie` = `c`.`id`)) left join `formateur` `form` on(`f`.`id_formateur` = `form`.`id`)) WHERE `f`.`actif` = 'oui' ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT `f`.`id` AS `id`, `f`.`titre_fr` AS `titre_fr`, `f`.`titre_ar` AS `titre_ar`, `f`.`id_type_formation` AS `id_type_formation`, `f`.`cible_fr` AS `cible_fr`, `f`.`cible_ar` AS `cible_ar`, `f`.`id_duree` AS `id_duree`, `f`.`periode` AS `periode`, `f`.`prix` AS `prix`, `f`.`discount` AS `discount`, `f`.`valeur_disc` AS `valeur_disc`, `f`.`descri_fr` AS `descri_fr`, `f`.`descri_ar` AS `descri_ar`, `f`.`id_categorie` AS `id_categorie`, `f`.`id_formateur` AS `id_formateur`, `f`.`actif` AS `actif`, `f`.`photo` AS `photo`, `f`.`ch1` AS `ch1`, `f`.`ch2` AS `ch2`, `f`.`ch3` AS `ch3`, `f`.`ch4` AS `ch4`, `f`.`ch5` AS `ch5`, `f`.`created_at` AS `created_at`, `f`.`updated_at` AS `updated_at`, `c`.`categorie_fr` AS `categorie_fr`, `c`.`categorie_ar` AS `categorie_ar`, `form`.`nom_prenom_fr` AS `formateur_nom_fr`, `form`.`nom_prenom_ar` AS `formateur_nom_ar`, `form`.`email` AS `formateur_email`, `form`.`telephone` AS `formateur_telephone`, `form`.`photo` AS `formateur_photo`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN `f`.`prix`- `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN concat('-',`f`.`valeur_disc`,' DH') ELSE NULL END AS `discount_text` FROM ((`formation` `f` left join `categorie` `c` on(`f`.`id_categorie` = `c`.`id`)) left join `formateur` `form` on(`f`.`id_formateur` = `form`.`id`)) WHERE `f`.`actif` = 'oui' ;
 
 --
 -- Index pour les tables déchargées
