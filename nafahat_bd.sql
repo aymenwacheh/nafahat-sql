@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 24 juin 2026 à 16:51
+-- Généré le : jeu. 25 juin 2026 à 11:15
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -178,7 +178,8 @@ INSERT INTO `formation` (`id`, `titre_fr`, `titre_ar`, `id_type_formation`, `cib
 (22, 'dfgbdfg', 'dfghfdgh', 0, 'sdfv', 'sdfv', 0, 'sdfv', NULL, NULL, 987987.00, 'non', NULL, 'sdfsdf', 'sdfvsdfv', 5, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:53:36', '2026-06-22 13:53:36'),
 (23, 'ooooo', 'oo', 0, 'glkyui', 'glkyui', 10, '20', NULL, NULL, 140.00, 'non', NULL, 'oooo', 'oooo', 8, 6, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:20:08', '2026-06-22 14:20:08'),
 (24, '77777777777777', '7777777777', 3, 'grereg', 'grereg', 2, '2026-06-23 - 2026-06-28', '2026-06-23', '2026-06-28', 3625.00, 'non', NULL, 'sdvsdv', 'sdvsdvd', 10, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-23 10:19:26', '2026-06-23 10:19:26'),
-(25, 'FFFFFFFF', 'FFFFFFFFFFF', 3, 'DCZ', 'DCZ', 1, '2026-06-23 - 2026-06-24', '2026-06-23', '2026-06-24', 2222.00, 'non', NULL, 'FFFFFFFFFFF', 'FFFFFFFFFFFFFF', 11, 7, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-24 14:32:17', '2026-06-24 14:32:17');
+(25, 'FFFFFFFF', 'FFFFFFFFFFF', 3, 'DCZ', 'DCZ', 1, '2026-06-23 - 2026-06-24', '2026-06-23', '2026-06-24', 2222.00, 'non', NULL, 'FFFFFFFFFFF', 'FFFFFFFFFFFFFF', 11, 7, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-24 14:32:17', '2026-06-24 14:32:17'),
+(26, 'gg', 'ggg', 3, 'ggg', 'ggg', 3, '2026-06-30 - 2026-06-28', '2026-06-30', '2026-06-28', 987.00, 'non', NULL, 'gggg', 'ggg', 11, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-25 07:35:38', '2026-06-25 07:35:38');
 
 -- --------------------------------------------------------
 
@@ -213,8 +214,8 @@ INSERT INTO `sous_categorie` (`id`, `nom_fr`, `nom_ar`, `id_categorie`, `ch1`, `
 (6, 'ooo', 'oooo', 8, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:19:09', '2026-06-22 14:19:09'),
 (7, 'e1', 'e1', 10, 'e1', 'e1', 'e1', 'e1', 'e1', '2026-06-23 07:40:33', '2026-06-23 07:40:33'),
 (8, 'uuu', 'uuuuu', 10, NULL, NULL, NULL, NULL, NULL, '2026-06-23 08:55:21', '2026-06-23 08:55:21'),
-(9, 'REZA', 'REZA', 11, 'A', 'A', 'A', 'A', NULL, '2026-06-24 14:16:45', '2026-06-24 14:16:45');
-(10, 'vvvv', 'vvvv', 11, 'A', 'A', 'A', 'A', NULL, '2026-06-24 16:16:45', '2026-06-24 16:16:45');
+(9, 'REZA', 'REZA', 11, 'A', 'A', 'A', 'A', NULL, '2026-06-24 14:16:45', '2026-06-24 14:16:45'),
+(10, 'dddd', 'ddddd', 7, NULL, NULL, NULL, NULL, NULL, '2026-06-25 07:41:40', '2026-06-25 07:41:40');
 
 -- --------------------------------------------------------
 
@@ -404,13 +405,13 @@ ALTER TABLE `formateur`
 -- AUTO_INCREMENT pour la table `formation`
 --
 ALTER TABLE `formation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `sous_categorie`
 --
 ALTER TABLE `sous_categorie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `type_formation`
