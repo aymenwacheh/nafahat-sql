@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 25 juin 2026 à 18:18
+-- Généré le : ven. 26 juin 2026 à 10:40
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -101,10 +101,6 @@ INSERT INTO `categorie` (`id`, `categorie_fr`, `categorie_ar`, `ch1`, `ch2`, `ch
 (2, 'Management & Leadership', 'الإدارة والقيادة', NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11', NULL),
 (3, 'Design & Créativité', 'التصميم والإبداع', NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11', NULL),
 (4, 'Langues & Communication', 'اللغات والتواصل', NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11', NULL),
-(5, 'Informatique & Tech', 'تكنولوجيا المعلومات', NULL, NULL, NULL, '2026-06-15 15:47:41', '2026-06-15 15:47:41', NULL),
-(6, 'Management & Leadership', 'الإدارة والقيادة', NULL, NULL, NULL, '2026-06-15 15:47:41', '2026-06-15 15:47:41', NULL),
-(7, 'Design & Créativité', 'التصميم والإبداع', NULL, NULL, NULL, '2026-06-15 15:47:41', '2026-06-15 15:47:41', NULL),
-(8, 'Langues & Communication', 'اللغات والتواصل', NULL, NULL, NULL, '2026-06-15 15:47:41', '2026-06-15 15:47:41', NULL),
 (9, 'tilawasdfgdf', 'sdfgsdftilawa arab', NULL, NULL, NULL, '2026-06-16 11:37:50', '2026-06-22 13:48:14', NULL),
 (10, 'eeeee', 'eeeeeeeee', 'e', 'e', 'e', '2026-06-23 07:39:49', '2026-06-23 07:39:49', NULL),
 (11, 'AZER', 'AZER', 'AA', 'AA', 'AA', '2026-06-24 14:16:19', '2026-06-24 14:16:19', NULL);
@@ -193,11 +189,6 @@ INSERT INTO `formateur` (`id`, `nom_prenom_fr`, `nom_prenom_ar`, `email`, `telep
 (3, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (4, 'Sophie Bernard', 'صوفي برنار', 'sophie.bernard@nafahat.com', '0645678901', 'Designer UI/UX primée, ancienne designer chez Apple.', 'مصممة UI/UX حاصلة على جوائز، مصممة سابقة في آبل.', 3, 'sophie_bernard.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
 (5, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل بين الثقافات.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:46:11', '2026-06-15 15:46:11'),
-(6, 'Jean Dupont', 'جان دوبون', 'jean.dupont@nafahat.com', '0612345678', 'Expert en développement mobile avec plus de 10 ans d\'expérience chez Google.', 'خبير في تطوير التطبيقات المحمول مع أكثر من 10 سنوات من الخبرة في جوجل.', 1, 'jean_dupont.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
-(7, 'Sarah Martin', 'سارة مارتان', 'sarah.martin@nafahat.com', '0623456789', 'Formatrice certifiée en IA et Machine Learning, docteure en informatique.', 'مدربة معتمدة في الذكاء الاصطناعي وتعلم الآلة، دكتورة في علوم الحاسوب.', 1, 'sarah_martin.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
-(8, 'Ahmed Benali', 'أحمد بن علي', 'ahmed.benali@nafahat.com', '0634567890', 'Consultant en management stratégique avec 15 ans d\'expérience internationale.', 'استشاري في الإدارة الاستراتيجية مع 15 سنة من الخبرة الدولية.', 2, 'ahmed_benali.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
-(9, 'Sophie Bernard', 'صوفي برنار', 'sophie.bernard@nafahat.com', '0645678901', 'Designer UI/UX primée, ancienne designer chez Apple.', 'مصممة UI/UX حاصلة على جوائز، مصممة سابقة في آبل.', 3, 'sophie_bernard.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
-(10, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل بين الثقافات.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (11, 'chikh bilel neb mahmoud', 'chikh bilel neb mahmoud', 'bilel@gmail.com', '98987654', '', '', 9, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:39:36', '2026-06-16 11:39:36'),
 (12, 'fghj', 'fgj', 'fghjfghj', '216546', 'fghjfghj', 'fghjfghj', 2, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:21:52', '2026-06-22 14:21:52');
 
@@ -241,15 +232,15 @@ CREATE TABLE `formation` (
 --
 
 INSERT INTO `formation` (`id`, `titre_fr`, `titre_ar`, `id_type_formation`, `cible_fr`, `cible_ar`, `id_duree`, `periode`, `date_debut`, `date_fin`, `prix`, `discount`, `valeur_disc`, `descri_fr`, `descri_ar`, `id_categorie`, `id_formateur`, `actif`, `photo`, `ch1`, `ch2`, `ch3`, `ch4`, `ch5`, `created_at`, `updated_at`) VALUES
-(15, 'qscsqdc', 'qscqc', 0, 'zszxzec', 'zszxzec', 2, '12 23', NULL, NULL, 222.00, 'oui', 10.00, 'qscqsdc', 'qsdcqsdc', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card4.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 10:43:55', '2026-06-16 17:24:55'),
-(16, 'Tilawa', 'Tilawa arab', 0, 'Debutant', 'Debutant', 4, '15 june 6 6 june', NULL, NULL, 2500.00, 'oui', 10.00, 'Tilawa  Tilawa Tilawa Tilawa Tilawa Tilawa ', 'Tilawa arab', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card3.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:05:34', '2026-06-16 11:05:34'),
-(17, 'zedze', 'zedzedz', 0, 'zzeze', 'zzeze', 3, '23', NULL, NULL, 233.00, 'oui', 11.00, 'mk,ok,p,o', 'zedzed', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:45:51', '2026-06-16 17:23:47'),
-(18, 'qsdqsd', 'qsdqsd', 0, 'qsdsd', 'qsdsd', 0, 'qsdqsd', NULL, NULL, 222.00, 'oui', 33.00, 'qsdqsd', 'qsdd', 3, 4, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 16:16:07', '2026-06-16 17:18:40'),
-(19, 'Nouvelle formation ', 'دورة تجويد جديدة', 0, 'Débutant', 'Débutant', 10, '01 jan - 10 octobre', NULL, NULL, 3000.00, 'oui', 20.00, 'nouvelle et nouvelle description francais', 'هذه الدورة لفائدتكم', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:36:54', '2026-06-17 09:36:54'),
-(20, 'vdfza', 'aadcdc', 0, 'dfvzevf', 'dfvzevf', 4, '44', NULL, NULL, 2020.00, 'non', NULL, 'azdcvaevzaev', 'avdeverv', 4, 5, 'oui', 'https://picsum.photos/800/450?random=1781689062087', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:37:42', '2026-06-17 09:37:42'),
-(21, 'azeza1111', 'aerfezaraerfaezr', 0, '5555', '5555', 55, '555', NULL, NULL, 5555.00, 'non', NULL, 'aefaer', 'aerfaerf', 2, 10, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card5.jfif', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:38:44', '2026-06-19 11:21:04'),
-(22, 'dfgbdfg', 'dfghfdgh', 0, 'sdfv', 'sdfv', 0, 'sdfv', NULL, NULL, 987987.00, 'non', NULL, 'sdfsdf', 'sdfvsdfv', 5, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:53:36', '2026-06-22 13:53:36'),
-(23, 'ooooo', 'oo', 0, 'glkyui', 'glkyui', 10, '20', NULL, NULL, 140.00, 'non', NULL, 'oooo', 'oooo', 8, 6, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:20:08', '2026-06-22 14:20:08'),
+(15, 'qscsqdc', 'qscqc', 3, 'zszxzec', 'zszxzec', 2, '12 23', NULL, NULL, 222.00, 'oui', 10.00, 'qscqsdc', 'qsdcqsdc', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card4.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 10:43:55', '2026-06-16 17:24:55'),
+(16, 'Tilawa', 'Tilawa arab', 3, 'Debutant', 'Debutant', 4, '15 june 6 6 june', NULL, NULL, 2500.00, 'oui', 10.00, 'Tilawa  Tilawa Tilawa Tilawa Tilawa Tilawa ', 'Tilawa arab', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card3.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:05:34', '2026-06-16 11:05:34'),
+(17, 'zedze', 'zedzedz', 3, 'zzeze', 'zzeze', 3, '23', NULL, NULL, 233.00, 'oui', 11.00, 'mk,ok,p,o', 'zedzed', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:45:51', '2026-06-16 17:23:47'),
+(18, 'qsdqsd', 'qsdqsd', 3, 'qsdsd', 'qsdsd', 2, 'qsdqsd', NULL, NULL, 222.00, 'oui', 33.00, 'qsdqsd', 'qsdd', 3, 4, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 16:16:07', '2026-06-16 17:18:40'),
+(19, 'Nouvelle formation ', 'دورة تجويد جديدة', 3, 'Débutant', 'Débutant', 10, '01 jan - 10 octobre', NULL, NULL, 3000.00, 'oui', 20.00, 'nouvelle et nouvelle description francais', 'هذه الدورة لفائدتكم', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:36:54', '2026-06-17 09:36:54'),
+(20, 'vdfza', 'aadcdc', 3, 'dfvzevf', 'dfvzevf', 4, '44', NULL, NULL, 2020.00, 'non', NULL, 'azdcvaevzaev', 'avdeverv', 4, 5, 'oui', 'https://picsum.photos/800/450?random=1781689062087', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:37:42', '2026-06-17 09:37:42'),
+(21, 'azeza1111', 'aerfezaraerfaezr', 3, '5555', '5555', 55, '555', NULL, NULL, 5555.00, 'non', NULL, 'aefaer', 'aerfaerf', 2, 10, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card5.jfif', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:38:44', '2026-06-19 11:21:04'),
+(22, 'dfgbdfg', 'dfghfdgh', 3, 'sdfv', 'sdfv', 0, 'sdfv', NULL, NULL, 987987.00, 'non', NULL, 'sdfsdf', 'sdfvsdfv', 5, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:53:36', '2026-06-22 13:53:36'),
+(23, 'ooooo', 'oo', 3, 'glkyui', 'glkyui', 10, '20', NULL, NULL, 140.00, 'non', NULL, 'oooo', 'oooo', 8, 6, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:20:08', '2026-06-22 14:20:08'),
 (24, '77777777777777', '7777777777', 3, 'grereg', 'grereg', 2, '2026-06-23 - 2026-06-28', '2026-06-23', '2026-06-28', 3625.00, 'non', NULL, 'sdvsdv', 'sdvsdvd', 10, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-23 10:19:26', '2026-06-23 10:19:26'),
 (25, 'FFFFFFFF', 'FFFFFFFFFFF', 3, 'DCZ', 'DCZ', 1, '2026-06-23 - 2026-06-24', '2026-06-23', '2026-06-24', 2222.00, 'non', NULL, 'FFFFFFFFFFF', 'FFFFFFFFFFFFFF', 11, 7, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-24 14:32:17', '2026-06-24 14:32:17'),
 (26, 'gg', 'ggg', 3, 'ggg', 'ggg', 3, '2026-06-30 - 2026-06-28', '2026-06-30', '2026-06-28', 987.00, 'non', NULL, 'gggg', 'ggg', 11, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-25 07:35:38', '2026-06-25 07:35:38');
@@ -395,7 +386,52 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `v_formation_complete`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT `f`.`id` AS `id`, `f`.`titre_fr` AS `titre_fr`, `f`.`titre_ar` AS `titre_ar`, `f`.`type` AS `type`, `f`.`cible_fr` AS `cible_fr`, `f`.`cible_ar` AS `cible_ar`, `f`.`duree` AS `duree`, `f`.`periode` AS `periode`, `f`.`prix` AS `prix`, `f`.`discount` AS `discount`, `f`.`valeur_disc` AS `valeur_disc`, `f`.`descri_fr` AS `descri_fr`, `f`.`descri_ar` AS `descri_ar`, `f`.`id_categorie` AS `id_categorie`, `f`.`id_formateur` AS `id_formateur`, `f`.`actif` AS `actif`, `f`.`photo` AS `photo`, `f`.`ch1` AS `ch1`, `f`.`ch2` AS `ch2`, `f`.`ch3` AS `ch3`, `f`.`ch4` AS `ch4`, `f`.`ch5` AS `ch5`, `f`.`created_at` AS `created_at`, `f`.`updated_at` AS `updated_at`, `c`.`categorie_fr` AS `categorie_fr`, `c`.`categorie_ar` AS `categorie_ar`, `form`.`nom_prenom_fr` AS `formateur_nom_fr`, `form`.`nom_prenom_ar` AS `formateur_nom_ar`, `form`.`email` AS `formateur_email`, `form`.`telephone` AS `formateur_telephone`, `form`.`photo` AS `formateur_photo`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN `f`.`prix`- `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN concat('-',`f`.`valeur_disc`,' DH') ELSE NULL END AS `discount_text` FROM ((`formation` `f` left join `categorie` `c` on(`f`.`id_categorie` = `c`.`id`)) left join `formateur` `form` on(`f`.`id_formateur` = `form`.`id`)) WHERE `f`.`actif` = 'oui' ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT 
+    `f`.`id` AS `id`, 
+    `f`.`titre_fr` AS `titre_fr`, 
+    `f`.`titre_ar` AS `titre_ar`, 
+    `f`.`id_type_formation` AS `id_type_formation`, 
+    `tf`.`type_formation` AS `type_formation`,
+    `f`.`cible_fr` AS `cible_fr`, 
+    `f`.`cible_ar` AS `cible_ar`, 
+    `f`.`id_duree` AS `id_duree`,
+    `d`.`type_duree` AS `type_duree`,
+    `f`.`periode` AS `periode`, 
+    `f`.`date_debut` AS `date_debut`,
+    `f`.`date_fin` AS `date_fin`,
+    `f`.`prix` AS `prix`, 
+    `f`.`discount` AS `discount`, 
+    `f`.`valeur_disc` AS `valeur_disc`, 
+    `f`.`descri_fr` AS `descri_fr`, 
+    `f`.`descri_ar` AS `descri_ar`, 
+    `f`.`id_categorie` AS `id_categorie`, 
+    `f`.`id_formateur` AS `id_formateur`, 
+    `f`.`actif` AS `actif`, 
+    `f`.`photo` AS `photo`, 
+    `f`.`ch1` AS `ch1`, 
+    `f`.`ch2` AS `ch2`, 
+    `f`.`ch3` AS `ch3`, 
+    `f`.`ch4` AS `ch4`, 
+    `f`.`ch5` AS `ch5`, 
+    `f`.`created_at` AS `created_at`, 
+    `f`.`updated_at` AS `updated_at`, 
+    `c`.`categorie_fr` AS `categorie_fr`, 
+    `c`.`categorie_ar` AS `categorie_ar`, 
+    `form`.`nom_prenom_fr` AS `formateur_nom_fr`, 
+    `form`.`nom_prenom_ar` AS `formateur_nom_ar`, 
+    `form`.`email` AS `formateur_email`, 
+    `form`.`telephone` AS `formateur_telephone`, 
+    `form`.`photo` AS `formateur_photo`, 
+    CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN `f`.`prix` - `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, 
+    CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN concat('-', `f`.`valeur_disc`, ' DH') ELSE NULL END AS `discount_text` 
+FROM ((`formation` `f` 
+    LEFT JOIN `categorie` `c` ON `f`.`id_categorie` = `c`.`id`)
+    LEFT JOIN `formateur` `form` ON `f`.`id_formateur` = `form`.`id`)
+    LEFT JOIN `type_formation` `tf` ON `f`.`id_type_formation` = `tf`.`id`
+    LEFT JOIN `duree` `d` ON `f`.`id_duree` = `d`.`id`
+WHERE `f`.`actif` = 'oui' ;
+
+-- --------------------------------------------------------
 
 --
 -- Index pour les tables déchargées
@@ -454,7 +490,9 @@ ALTER TABLE `formation`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_categorie` (`id_categorie`),
   ADD KEY `id_formateur` (`id_formateur`),
-  ADD KEY `idx_actif` (`actif`);
+  ADD KEY `idx_actif` (`actif`),
+  ADD KEY `idx_id_type_formation` (`id_type_formation`),
+  ADD KEY `idx_id_duree` (`id_duree`);
 
 --
 -- Index pour la table `sous_categorie`
@@ -564,6 +602,13 @@ ALTER TABLE `categorie`
 --
 ALTER TABLE `enfant`
   ADD CONSTRAINT `fk_enfant_adherent` FOREIGN KEY (`adherent_id`) REFERENCES `adherent` (`id`) ON DELETE CASCADE;
+
+--
+-- Contraintes pour la table `formation`
+--
+ALTER TABLE `formation`
+  ADD CONSTRAINT `fk_formation_type_formation` FOREIGN KEY (`id_type_formation`) REFERENCES `type_formation` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `fk_formation_duree` FOREIGN KEY (`id_duree`) REFERENCES `duree` (`id`) ON DELETE SET NULL;
 
 --
 -- Contraintes pour la table `sous_categorie`
