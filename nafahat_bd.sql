@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 29 juin 2026 à 17:47
+-- Généré le : dim. 19 juil. 2026 à 16:36
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -108,7 +108,66 @@ INSERT INTO `categorie` (`id`, `categorie_fr`, `categorie_ar`, `ch1`, `ch2`, `ch
 (9, 'tilawasdfgdf', 'sdfgsdftilawa arab', NULL, NULL, NULL, '2026-06-16 11:37:50', '2026-06-22 13:48:14', NULL),
 (10, 'eeeee', 'eeeeeeeee', 'e', 'e', 'e', '2026-06-23 07:39:49', '2026-06-23 07:39:49', NULL),
 (11, 'AZER', 'AZER', 'AA', 'AA', 'AA', '2026-06-24 14:16:19', '2026-06-24 14:16:19', NULL),
-(12, 'frrrf', 'frrrf', NULL, NULL, NULL, '2026-06-29 14:26:31', '2026-06-29 14:26:31', NULL);
+(12, 'frrrf', 'frrrf', NULL, NULL, NULL, '2026-06-29 14:26:31', '2026-06-29 14:26:31', NULL),
+(13, 'jjjjj', 'jjjjjjjjjjj', NULL, NULL, NULL, '2026-07-01 11:16:54', '2026-07-01 11:16:54', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chatbot_categories`
+--
+
+CREATE TABLE `chatbot_categories` (
+  `id` int(11) NOT NULL,
+  `nom_fr` varchar(100) NOT NULL,
+  `nom_ar` varchar(100) NOT NULL,
+  `active` tinyint(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `chatbot_categories`
+--
+
+INSERT INTO `chatbot_categories` (`id`, `nom_fr`, `nom_ar`, `active`, `created_at`) VALUES
+(1, 'Formations', 'التكوينات', 1, '2026-06-30 13:07:38'),
+(2, 'Prix', 'الأسعار', 1, '2026-06-30 13:07:38'),
+(3, 'Inscription', 'التسجيل', 1, '2026-06-30 13:07:38'),
+(4, 'Contact', 'الاتصال', 1, '2026-06-30 13:07:38'),
+(5, 'Formateurs', 'المؤطرين', 1, '2026-06-30 13:07:38'),
+(6, 'Général', 'عام', 1, '2026-06-30 13:07:38');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chatbot_qa`
+--
+
+CREATE TABLE `chatbot_qa` (
+  `id` int(11) NOT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `question_fr` varchar(255) NOT NULL,
+  `question_ar` varchar(255) NOT NULL,
+  `reponse_fr` text NOT NULL,
+  `reponse_ar` text NOT NULL,
+  `keywords` text DEFAULT NULL,
+  `active` tinyint(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `chatbot_qa`
+--
+
+INSERT INTO `chatbot_qa` (`id`, `category_id`, `question_fr`, `question_ar`, `reponse_fr`, `reponse_ar`, `keywords`, `active`, `created_at`) VALUES
+(1, 1, 'Quelles formations proposez-vous ?', 'ما هي التكوينات التي تقدمونها؟', 'Nous proposons des formations en Informatique, Management, Langues, Design, et bien plus. Consultez notre page Formations pour découvrir toutes nos offres !', 'نقدم تكوينات في الإعلامية، التسيير، اللغات، التصميم، والمزيد. زوروا صفحة التكوينات لاكتشاف جميع عروضنا !', 'formations, cours, stages, apprendre, programme', 1, '2026-06-30 13:07:38'),
+(2, 1, 'Comment choisir ma formation ?', 'كيف أختار تكويني؟', 'Vous pouvez consulter notre catalogue, lire les descriptions détaillées ou contacter nos conseillers pour vous orienter vers la formation qui vous correspond le mieux.', 'يمكنكم الاطلاع على الكتالوج، قراءة الوصف المفصل أو الاتصال بمستشارينا لتوجيهكم نحو التكوين الأنسب لكم.', 'choisir, sélectionner, décider, orientation, conseil', 1, '2026-06-30 13:07:38'),
+(3, 2, 'Quels sont les prix des formations ?', 'ما هي أسعار التكوينات؟', 'Les prix varient selon la formation et sa durée. Consultez notre page dédiée pour plus de détails ou contactez-nous pour un devis personnalisé.', 'تختلف الأسعار حسب التكوين ومدته. زوروا الصفحة المخصصة للمزيد من التفاصيل أو اتصلوا بنا للحصول على عرض سعر مخصص.', 'prix, tarif, coût, combien, paiement', 1, '2026-06-30 13:07:38'),
+(4, 3, 'Comment puis-je m\'inscrire ?', 'كيف يمكنني التسجيل؟', 'Pour vous inscrire :\n1. Choisissez votre formation\n2. Cliquez sur \"S\'inscrire\"\n3. Remplissez le formulaire\n4. Confirmation par email\n\nC\'est simple et rapide !', 'للتسجيل :\n1. اختر تكوينك\n2. اضغط على \"سجل\"\n3. املأ الاستمارة\n4. تأكيد عبر البريد الإلكتروني\n\nالأمر بسيط وسريع !', 'inscription, s inscrire, comment, formulaire, enregistrement', 1, '2026-06-30 13:07:38'),
+(5, 4, 'Comment vous contacter ?', 'كيف نتواصل معكم؟', '📧 Email : contact@nafahat.com\n📞 Téléphone : +216 XX XXX XXX\n📍 Adresse : Tunis, Tunisie\n\nNous sommes disponibles du lundi au vendredi de 9h à 18h.', '📧 البريد الإلكتروني : contact@nafahat.com\n📞 الهاتف : +216 XX XXX XXX\n📍 العنوان : تونس، تونس\n\nنحن متاحون من الاثنين إلى الجمعة من 9 صباحاً إلى 6 مساءً.', 'contact, contacter, email, téléphone, phone, adresse', 1, '2026-06-30 13:07:38'),
+(6, 5, 'Qui sont vos formateurs ?', 'من هم مؤطريكم؟', 'Nos formateurs sont des experts certifiés dans leurs domaines avec plusieurs années d\'expérience professionnelle et pédagogique.', 'مؤطرونا هم خبراء معتمدون في مجالاتهم ولديهم سنوات من الخبرة المهنية والتربوية.', 'formateur, professeur, enseignant, expert, compétence', 1, '2026-06-30 13:07:38'),
+(7, 6, 'Bonjour', 'مرحبا', 'Bonjour ! Comment puis-je vous aider aujourd\'hui ? N\'hésitez pas à me poser vos questions sur nos formations, tarifs, inscriptions...', 'مرحباً ! كيف يمكنني مساعدتك اليوم ؟ لا تتردد في طرح أسئلتك حول تكويناتنا، أسعارنا، التسجيل...', 'bonjour, salut, hello, hi, coucou', 1, '2026-06-30 13:07:38'),
+(8, 6, 'Merci', 'شكرا', 'Je vous en prie ! C\'est un plaisir de vous aider. N\'hésitez pas si vous avez d\'autres questions. 😊', 'عفواً ! من دواعي سروري مساعدتك. لا تتردد إذا كانت لديك أسئلة أخرى. 😊', 'merci, thanks, شكرا, merci beaucoup', 1, '2026-06-30 13:07:38');
 
 -- --------------------------------------------------------
 
@@ -136,7 +195,8 @@ CREATE TABLE `duree` (
 INSERT INTO `duree` (`id`, `type_duree`, `ch1`, `ch2`, `ch3`, `ch4`, `ch5`, `ch6`, `created_at`, `updated_at`) VALUES
 (1, 'دورة مكثفة', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:51:57', '2026-06-29 14:52:33'),
 (2, 'دورة أسبوعية', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:52:11', '2026-06-29 14:52:37'),
-(3, 'دورة مسجلة', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:52:24', '2026-06-29 14:52:41');
+(3, 'دورة مسجلة', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:52:24', '2026-06-29 14:52:41'),
+(10, '33', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-01 12:03:58', '2026-07-01 12:03:58');
 
 -- --------------------------------------------------------
 
@@ -200,7 +260,8 @@ INSERT INTO `formateur` (`id`, `nom_prenom_fr`, `nom_prenom_ar`, `email`, `telep
 (10, 'Karim El Fassi', 'كريم الفاسي', 'karim.elfassi@nafahat.com', '0656789012', 'Spécialiste en formation linguistique et communication interculturelle.', 'متخصص في تكوين اللغات والتواصل بين الثقافات.', 4, 'karim_elfassi.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-15 15:47:42', '2026-06-15 15:47:42'),
 (11, 'chikh bilel neb mahmoud', 'chikh bilel neb mahmoud', 'bilel@gmail.com', '98987654', '', '', 9, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:39:36', '2026-06-16 11:39:36'),
 (12, 'fghj', 'fgj', 'fghjfghj', '216546', 'fghjfghj', 'fghjfghj', 2, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:21:52', '2026-06-22 14:21:52'),
-(13, 'tt', 'tt', 'tt', '25366987', 'tttt', 'ttt', 7, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 11:12:36', '2026-06-29 11:12:36');
+(13, 'tt', 'tt', 'tt', '25366987', 'tttt', 'ttt', 7, NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 11:12:36', '2026-06-29 11:12:36'),
+(14, 'zzzzzzzzzzzzz', 'zzzzzzzzzzz', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-01 11:45:38', '2026-07-01 11:45:38');
 
 -- --------------------------------------------------------
 
@@ -239,27 +300,39 @@ CREATE TABLE `formation` (
   `nbr_seance` int(11) DEFAULT 0,
   `nbr_jour` int(11) DEFAULT 0,
   `repetitive` enum('oui','non') DEFAULT 'non',
-  `jour_semaine` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`jour_semaine`))
+  `jour_semaine` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`jour_semaine`)),
+  `afficher_duree` tinyint(1) DEFAULT 1,
+  `afficher_periode` tinyint(1) DEFAULT 1,
+  `afficher_cible` tinyint(1) DEFAULT 1,
+  `afficher_prix` tinyint(1) DEFAULT 1,
+  `afficher_formateur` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `formation`
 --
 
-INSERT INTO `formation` (`id`, `titre_fr`, `titre_ar`, `id_type_formation`, `cible_fr`, `cible_ar`, `id_duree`, `periode`, `date_debut`, `date_fin`, `prix`, `discount`, `valeur_disc`, `descri_fr`, `descri_ar`, `id_categorie`, `id_formateur`, `actif`, `photo`, `ch1`, `ch2`, `ch3`, `ch4`, `ch5`, `created_at`, `updated_at`, `nbr_heur`, `nbr_seance`, `nbr_jour`, `repetitive`, `jour_semaine`) VALUES
-(15, 'qscsqdc', 'qscqc', 0, 'zszxzec', 'zszxzec', 2, '12 23', NULL, NULL, 222.00, 'oui', 10.00, 'qscqsdc', 'qsdcqsdc', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card4.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 10:43:55', '2026-06-16 17:24:55', 0, 0, 0, 'non', NULL),
-(16, 'Tilawa', 'Tilawa arab', 0, 'Debutant', 'Debutant', 4, '15 june 6 6 june', NULL, NULL, 2500.00, 'oui', 10.00, 'Tilawa  Tilawa Tilawa Tilawa Tilawa Tilawa ', 'Tilawa arab', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card3.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:05:34', '2026-06-16 11:05:34', 0, 0, 0, 'non', NULL),
-(17, 'zedze', 'zedzedz', 0, 'zzeze', 'zzeze', 3, '23', NULL, NULL, 233.00, 'oui', 11.00, 'mk,ok,p,o', 'zedzed', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:45:51', '2026-06-16 17:23:47', 0, 0, 0, 'non', NULL),
-(18, 'qsdqsd', 'qsdqsd', 0, 'qsdsd', 'qsdsd', 0, 'qsdqsd', NULL, NULL, 222.00, 'oui', 33.00, 'qsdqsd', 'qsdd', 3, 4, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 16:16:07', '2026-06-16 17:18:40', 0, 0, 0, 'non', NULL),
-(19, 'Nouvelle formation ', 'دورة تجويد جديدة', 0, 'Débutant', 'Débutant', 10, '01 jan - 10 octobre', NULL, NULL, 3000.00, 'oui', 20.00, 'nouvelle et nouvelle description francais', 'هذه الدورة لفائدتكم', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:36:54', '2026-06-17 09:36:54', 0, 0, 0, 'non', NULL),
-(20, 'vdfza', 'aadcdc', 0, 'dfvzevf', 'dfvzevf', 4, '44', NULL, NULL, 2020.00, 'non', NULL, 'azdcvaevzaev', 'avdeverv', 4, 5, 'oui', 'https://picsum.photos/800/450?random=1781689062087', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:37:42', '2026-06-17 09:37:42', 0, 0, 0, 'non', NULL),
-(21, 'azeza1111', 'aerfezaraerfaezr', 0, '5555', '5555', 55, '555', NULL, NULL, 5555.00, 'non', NULL, 'aefaer', 'aerfaerf', 2, 10, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card5.jfif', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:38:44', '2026-06-19 11:21:04', 0, 0, 0, 'non', NULL),
-(22, 'dfgbdfg', 'dfghfdgh', 0, 'sdfv', 'sdfv', 0, 'sdfv', NULL, NULL, 987987.00, 'non', NULL, 'sdfsdf', 'sdfvsdfv', 5, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:53:36', '2026-06-22 13:53:36', 0, 0, 0, 'non', NULL),
-(23, 'ooooo', 'oo', 0, 'glkyui', 'glkyui', 10, '20', NULL, NULL, 140.00, 'non', NULL, 'oooo', 'oooo', 8, 6, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:20:08', '2026-06-22 14:20:08', 0, 0, 0, 'non', NULL),
-(24, '77777777777777', '7777777777', 3, 'grereg', 'grereg', 2, '2026-06-23 - 2026-06-28', '2026-06-23', '2026-06-28', 3625.00, 'non', NULL, 'sdvsdv', 'sdvsdvd', 10, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-23 10:19:26', '2026-06-23 10:19:26', 0, 0, 0, 'non', NULL),
-(25, 'FFFFFFFF', 'FFFFFFFFFFF', 3, 'DCZ', 'DCZ', 1, '2026-06-23 - 2026-06-24', '2026-06-23', '2026-06-24', 2222.00, 'non', NULL, 'FFFFFFFFFFF', 'FFFFFFFFFFFFFF', 11, 7, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-24 14:32:17', '2026-06-24 14:32:17', 0, 0, 0, 'non', NULL),
-(26, 'gg', 'ggg', 3, 'ggg', 'ggg', 3, '2026-06-30 - 2026-06-28', '2026-06-30', '2026-06-28', 987.00, 'non', NULL, 'gggg', 'ggg', 11, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-25 07:35:38', '2026-06-25 07:35:38', 0, 0, 0, 'non', NULL),
-(27, 'tttttt11111111111', 'ttttttttttttttttttttttttttttttttttt', 3, 'zretget', 'zretget', 6, '2026-06-29 - 2026-06-26', '2026-06-29', '2026-06-26', 2500.00, 'non', NULL, 'zgzrtg', 'zgrtg', 12, 10, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:27:38', '2026-06-29 14:27:56', 0, 0, 0, 'non', NULL);
+INSERT INTO `formation` (`id`, `titre_fr`, `titre_ar`, `id_type_formation`, `cible_fr`, `cible_ar`, `id_duree`, `periode`, `date_debut`, `date_fin`, `prix`, `discount`, `valeur_disc`, `descri_fr`, `descri_ar`, `id_categorie`, `id_formateur`, `actif`, `photo`, `ch1`, `ch2`, `ch3`, `ch4`, `ch5`, `created_at`, `updated_at`, `nbr_heur`, `nbr_seance`, `nbr_jour`, `repetitive`, `jour_semaine`, `afficher_duree`, `afficher_periode`, `afficher_cible`, `afficher_prix`, `afficher_formateur`) VALUES
+(15, 'qscsqdc', 'qscqc', 0, 'zszxzec', 'zszxzec', 2, '12 23', NULL, NULL, 222.00, 'oui', 10.00, 'qscqsdc', 'qsdcqsdc', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card4.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 10:43:55', '2026-06-16 17:24:55', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(16, 'Tilawa', 'Tilawa arab', 0, 'Debutant', 'Debutant', 4, '15 june 6 6 june', NULL, NULL, 2500.00, 'oui', 10.00, 'Tilawa  Tilawa Tilawa Tilawa Tilawa Tilawa ', 'Tilawa arab', NULL, NULL, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card3.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:05:34', '2026-06-16 11:05:34', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(17, 'zedze', 'zedzedz', 0, 'zzeze', 'zzeze', 3, '23', NULL, NULL, 233.00, 'oui', 11.00, 'mk,ok,p,o', 'zedzed', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 11:45:51', '2026-06-16 17:23:47', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(18, 'qsdqsd', 'qsdqsd', 0, 'qsdsd', 'qsdsd', 0, 'qsdqsd', NULL, NULL, 222.00, 'oui', 33.00, 'qsdqsd', 'qsdd', 3, 4, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-16 16:16:07', '2026-06-16 17:18:40', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(19, 'Nouvelle formation ', 'دورة تجويد جديدة', 0, 'Débutant', 'Débutant', 10, '01 jan - 10 octobre', NULL, NULL, 3000.00, 'oui', 20.00, 'nouvelle et nouvelle description francais', 'هذه الدورة لفائدتكم', 9, 11, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card6.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:36:54', '2026-06-17 09:36:54', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(20, 'vdfza', 'aadcdc', 0, 'dfvzevf', 'dfvzevf', 4, '44', NULL, NULL, 2020.00, 'non', NULL, 'azdcvaevzaev', 'avdeverv', 4, 5, 'oui', 'https://picsum.photos/800/450?random=1781689062087', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:37:42', '2026-06-17 09:37:42', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(21, 'azeza1111', 'aerfezaraerfaezr', 0, '5555', '5555', 55, '555', NULL, NULL, 5555.00, 'non', NULL, 'aefaer', 'aerfaerf', 2, 10, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card5.jfif', NULL, NULL, NULL, NULL, NULL, '2026-06-17 09:38:44', '2026-06-19 11:21:04', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(22, 'dfgbdfg', 'dfghfdgh', 0, 'sdfv', 'sdfv', 0, 'sdfv', NULL, NULL, 987987.00, 'non', NULL, 'sdfsdf', 'sdfvsdfv', 5, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-22 13:53:36', '2026-06-22 13:53:36', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(23, 'ooooo', 'oo', 0, 'glkyui', 'glkyui', 10, '20', NULL, NULL, 140.00, 'non', NULL, 'oooo', 'oooo', 8, 6, 'oui', 'C:\\Users\\douane\\nafahat\\assets\\images\\card2.jpg', NULL, NULL, NULL, NULL, NULL, '2026-06-22 14:20:08', '2026-06-22 14:20:08', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(24, '77777777777777', '7777777777', 3, 'grereg', 'grereg', 2, '2026-06-23 - 2026-06-28', '2026-06-23', '2026-06-28', 3625.00, 'non', NULL, 'sdvsdv', 'sdvsdvd', 10, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-23 10:19:26', '2026-06-23 10:19:26', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(25, 'FFFFFFFF', 'FFFFFFFFFFF', 3, 'DCZ', 'DCZ', 1, '2026-06-23 - 2026-06-24', '2026-06-23', '2026-06-24', 2222.00, 'non', NULL, 'FFFFFFFFFFF', 'FFFFFFFFFFFFFF', 11, 7, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-24 14:32:17', '2026-06-24 14:32:17', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(26, 'gg', 'ggg', 3, 'ggg', 'ggg', 3, '2026-06-30 - 2026-06-28', '2026-06-30', '2026-06-28', 987.00, 'non', NULL, 'gggg', 'ggg', 11, 5, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-25 07:35:38', '2026-06-25 07:35:38', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(27, 'tttttt11111111111', 'ttttttttttttttttttttttttttttttttttt', 3, 'zretget', 'zretget', 6, '2026-06-29 - 2026-06-26', '2026-06-29', '2026-06-26', 2500.00, 'non', NULL, 'zgzrtg', 'zgrtg', 12, 10, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-06-29 14:27:38', '2026-06-29 14:27:56', 0, 0, 0, 'non', NULL, 1, 1, 1, 1, 1),
+(28, 'lkj', 'lkj', 3, 'grand', 'grand', 3, '2026-07-02 - 2026-07-31', '2026-07-02', '2026-07-31', 800.00, 'oui', 20.00, 'jhg khgkjhgjhg jhgkjhgjhg fdtdt oiuoiu nlkjkljh gfdgfdg', 'jhg khgkjhgjhg jhgkjhgjhg fdtdt oiuoiu nlkjkljh gfdgfdg', 11, 11, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-02 10:37:14', '2026-07-02 10:37:14', 30, 14, 15, 'oui', '[\"mardi\",\"jeudi\",\"samedi\"]', 1, 1, 1, 1, 1),
+(29, 'titre francais ', 'titre arabe', 2, 'publique cible', 'publique cible', 2, '2026-07-02 - 2026-07-31', '2026-07-02', '2026-07-31', 15000.00, 'oui', 15.00, 'description francais', 'description arabe', 11, 11, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-02 10:47:03', '2026-07-02 10:47:03', 20, 10, 5, 'oui', '[\"lundi\",\"jeudi\",\"dimanche\"]', 0, 0, 0, 0, 0),
+(30, 'tartata', 'تراتاتا', 3, 'للكبار', 'للكبار', 1, '2026-07-02 - 2026-07-31', '2026-07-02', '2026-07-31', 69874.00, 'non', NULL, 'Description en francais', 'وصف بالغة بالعربية ', 9, 10, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-02 11:43:54', '2026-07-10 17:27:20', 30, 35, 40, 'oui', '[\"lundi\",\"mercredi\",\"vendredi\",\"dimanche\"]', 1, 1, 1, 1, 1),
+(31, 'XXXXXXXX', 'xxxxx', 2, 'Tout le monde', 'Tout le monde', 2, '2026-07-10 - 2026-07-31', '2026-07-10', '2026-07-31', 2500.00, 'oui', 20.00, 'description description  description  description description description description description description ', ' descriAr descriAr descriAr descriAr descriAr descriAr descriAr ', 8, 11, 'oui', NULL, NULL, NULL, NULL, NULL, NULL, '2026-07-10 16:56:22', '2026-07-10 20:16:37', 20, 5, 4, 'oui', '[\"lundi\"]', 1, 1, 0, 1, 0),
+(32, 'fffffffffff', 'fffffffff', 2, 'ffffffffff', 'ffffffffff', 3, '2026-07-16 - 2026-08-20', '2026-07-16', '2026-08-20', 258.00, 'non', NULL, 'ffffffffffffffff', 'fffffffffffffffffffff', 11, 11, 'oui', 'http://localhost:3000/uploads/formations/formation-1784287695198-983232437.png', NULL, NULL, NULL, NULL, NULL, '2026-07-17 11:29:14', '2026-07-17 11:29:14', 55, 5, 5, 'oui', '[\"jeudi\"]', 1, 1, 1, 1, 1),
+(33, 'yuyu', 'yuyu', 2, 'uiuiuiui', 'uiuiuiui', 2, '2026-07-17 - 2026-07-29', '2026-07-17', '2026-07-29', 369.00, 'non', NULL, 'uiuiui', 'uuiui', 11, 11, 'oui', 'http://localhost:3000/uploads/formations/formation-1784288203553-680225949.jpg', NULL, NULL, NULL, NULL, NULL, '2026-07-17 11:36:49', '2026-07-17 11:36:49', 44, 4, 4, 'non', NULL, 1, 1, 1, 1, 1),
+(34, 'rrrrrrrrr', 'rrrrrrrrrrr', 2, 'tout le monde', 'tout le monde', 2, '2026-07-15 - 2026-07-25', '2026-07-15', '2026-07-25', 9999.00, 'non', NULL, 'desc', 'desc', 11, 11, 'oui', 'http://localhost:3000/uploads/formations/formation-1784405519711-224518892.jpg', NULL, NULL, NULL, NULL, NULL, '2026-07-18 20:12:24', '2026-07-18 20:12:24', 11, 11, 11, 'oui', '[\"lundi\",\"jeudi\",\"dimanche\"]', 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -357,7 +430,7 @@ INSERT INTO `videos` (`id`, `title_fr`, `title_ar`, `description_fr`, `descripti
 (7, 'SDCZD', 'SDCZDZZDZED', 'ZEDZDZECZECZCZ', 'ZCZZEDZD', 'rlqJ5SVk6Cw', 'https://img.youtube.com/vi/rlqJ5SVk6Cw/hqdefault.jpg', 1, 1, '2026-06-17 17:45:06', '2026-06-17 17:45:06'),
 (8, 'sdfg', 'sdfg', 'sfgd', 'sdfg', 'sdfg', 'https://img.youtube.com/vi/sdfg/hqdefault.jpg', 0, 1, '2026-06-22 15:48:28', '2026-06-22 15:48:28'),
 (9, 'uiuiui', 'uiuiui', 'iiiiiiiiiiiiiiiiiiiii', 'iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii', 'Uy8EliWBuEs', 'https://img.youtube.com/vi/Uy8EliWBuEs/hqdefault.jpg', 1, 1, '2026-06-22 16:21:16', '2026-06-22 16:21:16'),
-(10, 'bvjhvjhvjh', 'gfyugfyfyt', 'ghcjgchgf', 'gfjygfjy', '8v-iB7lEw78', 'https://img.youtube.com/vi/8v-iB7lEw78/hqdefault.jpg', 0, 1, '2026-06-22 17:49:04', '2026-06-22 17:49:04'),
+(10, 'bvjhvjhvjh', 'gfyugfyfyt', 'ghcjgchgf', 'gfjygfjy', '8v-iB7lEw78', 'https://img.youtube.com/vi/8v-iB7lEw78/hqdefault.jpg', 1, 1, '2026-06-22 17:49:04', '2026-06-22 17:49:04'),
 (11, 'warda', 'warda', 'warda', 'warda', 'RDF8IWDyyF8Dk&index', 'https://img.youtube.com/vi/RDF8IWDyyF8Dk&index/hqdefault.jpg', 1, 1, '2026-06-23 13:23:48', '2026-06-23 13:23:48'),
 (12, 'CQSDC', 'QSDCDQS', 'QSDCSDC', 'QSDCD', 'tfs9gBLEmi4', 'https://img.youtube.com/vi/tfs9gBLEmi4/hqdefault.jpg', 0, 1, '2026-06-24 16:31:33', '2026-06-24 16:31:33');
 
@@ -381,15 +454,6 @@ CREATE TABLE `v_formations_promo` (
 -- --------------------------------------------------------
 
 --
--- Doublure de structure pour la vue `v_formation_complete`
--- (Voir ci-dessous la vue réelle)
---
-CREATE TABLE `v_formation_complete` (
-);
-
--- --------------------------------------------------------
-
---
 -- Structure de la vue `v_formations_promo`
 --
 DROP TABLE IF EXISTS `v_formations_promo`;
@@ -399,11 +463,46 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure de la vue `v_formation_complete`
+-- Structure de la vue `v_formation_complete` (CORRIGÉE)
 --
 DROP TABLE IF EXISTS `v_formation_complete`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT `f`.`id` AS `id`, `f`.`titre_fr` AS `titre_fr`, `f`.`titre_ar` AS `titre_ar`, `f`.`type` AS `type`, `f`.`cible_fr` AS `cible_fr`, `f`.`cible_ar` AS `cible_ar`, `f`.`duree` AS `duree`, `f`.`periode` AS `periode`, `f`.`prix` AS `prix`, `f`.`discount` AS `discount`, `f`.`valeur_disc` AS `valeur_disc`, `f`.`descri_fr` AS `descri_fr`, `f`.`descri_ar` AS `descri_ar`, `f`.`id_categorie` AS `id_categorie`, `f`.`id_formateur` AS `id_formateur`, `f`.`actif` AS `actif`, `f`.`photo` AS `photo`, `f`.`ch1` AS `ch1`, `f`.`ch2` AS `ch2`, `f`.`ch3` AS `ch3`, `f`.`ch4` AS `ch4`, `f`.`ch5` AS `ch5`, `f`.`created_at` AS `created_at`, `f`.`updated_at` AS `updated_at`, `c`.`categorie_fr` AS `categorie_fr`, `c`.`categorie_ar` AS `categorie_ar`, `form`.`nom_prenom_fr` AS `formateur_nom_fr`, `form`.`nom_prenom_ar` AS `formateur_nom_ar`, `form`.`email` AS `formateur_email`, `form`.`telephone` AS `formateur_telephone`, `form`.`photo` AS `formateur_photo`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN `f`.`prix`- `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` is not null THEN concat('-',`f`.`valeur_disc`,' DH') ELSE NULL END AS `discount_text` FROM ((`formation` `f` left join `categorie` `c` on(`f`.`id_categorie` = `c`.`id`)) left join `formateur` `form` on(`f`.`id_formateur` = `form`.`id`)) WHERE `f`.`actif` = 'oui' ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v_formation_complete`  AS SELECT 
+  `f`.`id` AS `id`, 
+  `f`.`titre_fr` AS `titre_fr`, 
+  `f`.`titre_ar` AS `titre_ar`, 
+  `f`.`id_type_formation` AS `type`, 
+  `f`.`cible_fr` AS `cible_fr`, 
+  `f`.`cible_ar` AS `cible_ar`, 
+  `f`.`id_duree` AS `duree`, 
+  `f`.`periode` AS `periode`, 
+  `f`.`prix` AS `prix`, 
+  `f`.`discount` AS `discount`, 
+  `f`.`valeur_disc` AS `valeur_disc`, 
+  `f`.`descri_fr` AS `descri_fr`, 
+  `f`.`descri_ar` AS `descri_ar`, 
+  `f`.`id_categorie` AS `id_categorie`, 
+  `f`.`id_formateur` AS `id_formateur`, 
+  `f`.`actif` AS `actif`, 
+  `f`.`photo` AS `photo`, 
+  `f`.`ch1` AS `ch1`, 
+  `f`.`ch2` AS `ch2`, 
+  `f`.`ch3` AS `ch3`, 
+  `f`.`ch4` AS `ch4`, 
+  `f`.`ch5` AS `ch5`, 
+  `f`.`created_at` AS `created_at`, 
+  `f`.`updated_at` AS `updated_at`, 
+  `c`.`categorie_fr` AS `categorie_fr`, 
+  `c`.`categorie_ar` AS `categorie_ar`, 
+  `form`.`nom_prenom_fr` AS `formateur_nom_fr`, 
+  `form`.`nom_prenom_ar` AS `formateur_nom_ar`, 
+  `form`.`email` AS `formateur_email`, 
+  `form`.`telephone` AS `formateur_telephone`, 
+  `form`.`photo` AS `formateur_photo`, 
+  CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` IS NOT NULL THEN `f`.`prix` - `f`.`valeur_disc` ELSE `f`.`prix` END AS `prix_final`, 
+  CASE WHEN `f`.`discount` = 'oui' AND `f`.`valeur_disc` IS NOT NULL THEN CONCAT('-', `f`.`valeur_disc`, ' DH') ELSE NULL END AS `discount_text` 
+FROM (`formation` `f` LEFT JOIN `categorie` `c` ON(`f`.`id_categorie` = `c`.`id`) LEFT JOIN `formateur` `form` ON(`f`.`id_formateur` = `form`.`id`)) 
+WHERE `f`.`actif` = 'oui' ;
 
 --
 -- Index pour les tables déchargées
@@ -434,6 +533,19 @@ ALTER TABLE `adherent`
 ALTER TABLE `categorie`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx_categorie_parent` (`parent_id`);
+
+--
+-- Index pour la table `chatbot_categories`
+--
+ALTER TABLE `chatbot_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `chatbot_qa`
+--
+ALTER TABLE `chatbot_qa`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `category_id` (`category_id`);
 
 --
 -- Index pour la table `duree`
@@ -506,13 +618,25 @@ ALTER TABLE `adherent`
 -- AUTO_INCREMENT pour la table `categorie`
 --
 ALTER TABLE `categorie`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT pour la table `chatbot_categories`
+--
+ALTER TABLE `chatbot_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT pour la table `chatbot_qa`
+--
+ALTER TABLE `chatbot_qa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `duree`
 --
 ALTER TABLE `duree`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `enfant`
@@ -524,13 +648,13 @@ ALTER TABLE `enfant`
 -- AUTO_INCREMENT pour la table `formateur`
 --
 ALTER TABLE `formateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `formation`
 --
 ALTER TABLE `formation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT pour la table `sous_categorie`
@@ -566,6 +690,12 @@ ALTER TABLE `acces_adherent`
 ALTER TABLE `categorie`
   ADD CONSTRAINT `categorie_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `categorie` (`id`) ON DELETE SET NULL,
   ADD CONSTRAINT `fk_categorie_parent` FOREIGN KEY (`parent_id`) REFERENCES `categorie` (`id`) ON DELETE SET NULL;
+
+--
+-- Contraintes pour la table `chatbot_qa`
+--
+ALTER TABLE `chatbot_qa`
+  ADD CONSTRAINT `chatbot_qa_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `chatbot_categories` (`id`) ON DELETE SET NULL;
 
 --
 -- Contraintes pour la table `enfant`
